@@ -1,10 +1,12 @@
+import clsx from "clsx";
 import { Metadata } from "next";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
 import { notFound } from "next/navigation";
 
 import "@/app/globals.css";
-import { getMessages } from "@/lib/messages";
+import { inter, notoSans, sirajee } from "@/lib/fonts";
 import { locales } from "@/lib/locales";
+import { getMessages } from "@/lib/messages";
 
 interface ParamProps {
   params: { locale: string };
@@ -28,10 +30,16 @@ export default async function RootLocaleLayout({
   } catch (err) {
     notFound();
   }
+  const classes = clsx(
+    inter.variable,
+    notoSans.variable,
+    sirajee.variable,
+    locale === "bn" ? "font-bengali" : "font-inter"
+  );
 
   return (
     <html lang={locale}>
-      <body className={"font-sans"}>
+      <body className={classes}>
         <NextIntlClientProvider
           locale={locale}
           messages={messages}
