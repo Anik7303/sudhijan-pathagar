@@ -4,10 +4,11 @@ import { NextIntlClientProvider, createTranslator } from "next-intl";
 import { notFound } from "next/navigation";
 
 import "@/app/globals.css";
-import { inter, notoSans, sirajee } from "@/lib/fonts";
+import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
+import { inter, nikosh, notoSans, sirajee } from "@/lib/fonts";
 import { locales } from "@/lib/locales";
 import { getMessages } from "@/lib/messages";
-import Navigation from "@/components/Navigation";
 
 interface ParamProps {
   params: { locale: string };
@@ -33,9 +34,11 @@ export default async function RootLocaleLayout({
   }
   const classes = clsx(
     inter.variable,
+    nikosh.variable,
     notoSans.variable,
     sirajee.variable,
-    locale === "bn" ? "font-bengali" : "font-inter"
+    locale === "bn" ? "font-nikosh" : "font-inter",
+    "flex min-h-[100svh] flex-col"
   );
 
   return (
@@ -47,7 +50,8 @@ export default async function RootLocaleLayout({
           timeZone="Asia/Dhaka"
         >
           <Navigation />
-          {children}
+          <main className="flex-1">{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
