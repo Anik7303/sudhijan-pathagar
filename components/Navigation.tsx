@@ -62,7 +62,7 @@ export default function Navigation() {
   const t = useTranslations("links");
   return (
     <header className="sticky top-0 z-10 flex flex-col flex-wrap items-center justify-between bg-white px-2 py-3 backdrop-blur lg:flex-row">
-      <Brand label={t("brand")} />
+      <Brand label={t("brand")} size={40} bold />
       <nav className="hidden flex-col items-center gap-1 lg:flex lg:flex-row">
         {links.map((link) => {
           if (link.children) {
