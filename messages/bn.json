@@ -18,17 +18,17 @@
       "index": "পরিচালনা",
       "board_of_directors": "পরিচালনা পরিষদ",
       "executive_council": "কার্যকরী পরিষদ",
-      "student_member": "ছাত্র সদস্য",
-      "general_member": "সাধারণ সদস্য",
-      "lifetime_member": "আজীবন সদস্য"
+      "student_members": "ছাত্র সদস্য",
+      "general_members": "সাধারণ সদস্য",
+      "lifetime_members": "আজীবন সদস্য"
     },
-    "publication": "প্রকাশনা",
-    "award": "পুরস্কার",
-    "scholarship": "বৃত্তি",
+    "publications": "প্রকাশনা",
+    "awards": "পুরস্কার",
+    "scholarships": "বৃত্তি",
     "gallery": {
       "index": "গ্যালারি",
-      "image": "ছবি",
-      "video": "ভিডিও"
+      "images": "ছবি",
+      "videos": "ভিডিও"
     },
     "book_search": "বই অনুসন্ধান"
   },

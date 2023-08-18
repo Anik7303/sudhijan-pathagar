@@ -7,6 +7,7 @@ import "@/app/globals.css";
 import { inter, notoSans, sirajee } from "@/lib/fonts";
 import { locales } from "@/lib/locales";
 import { getMessages } from "@/lib/messages";
+import Navigation from "@/components/Navigation";
 
 interface ParamProps {
   params: { locale: string };
@@ -45,6 +46,7 @@ export default async function RootLocaleLayout({
           messages={messages}
           timeZone="Asia/Dhaka"
         >
+          <Navigation />
           {children}
         </NextIntlClientProvider>
       </body>

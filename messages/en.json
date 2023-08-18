@@ -18,17 +18,17 @@
       "index": "Administration",
       "board_of_directors": "Board of Directors",
       "executive_council": "Executive Council",
-      "student_member": "Student Member",
-      "general_member": "General Member",
-      "lifetime_member": "Lifetime Member"
+      "student_members": "Student Member",
+      "general_members": "General Member",
+      "lifetime_members": "Lifetime Member"
     },
-    "publication": "Publication",
-    "award": "Award",
-    "scholarship": "Scholarship",
+    "publications": "Publications",
+    "awards": "Awards",
+    "scholarships": "Scholarships",
     "gallery": {
       "index": "Gallery",
-      "image": "Image",
-      "video": "Video"
+      "images": "Images",
+      "videos": "Videos"
     },
     "book_search": "Book Search"
   },
