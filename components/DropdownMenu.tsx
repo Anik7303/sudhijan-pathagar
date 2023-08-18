@@ -18,10 +18,10 @@ export default function DropdownMenu({
   href = "#",
 }: DropdownMenuProps) {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const isActive = href !== "/" && pathname.startsWith(href);
 
   return (
-    <div className="group relative">
+    <div className="group relative" data-open={isActive}>
       <Link
         href={href}
         className={clsx(
