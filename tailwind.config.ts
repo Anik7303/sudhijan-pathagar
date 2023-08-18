@@ -19,6 +19,18 @@ const config: Config = {
         sirajee: ["var(--font-sirajee)"],
         bengali: ["var(--font-noto-bengali)"],
       },
+      colors: {
+        primary: {
+          default: "rgb(0,155,33)",
+          light: "rgb(38,217,77)",
+          dark: "rgb(13,115,35)",
+        },
+        secondary: {
+          default: "rgb(138,38,15)",
+          light: "rgb(217,71,38)",
+          dark: "rgb(114,31,13)",
+        },
+      },
     },
   },
   plugins: [],
