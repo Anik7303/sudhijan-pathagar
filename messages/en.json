@@ -2,7 +2,8 @@
   "info": {
     "name": "Sudhijan Pathagar",
     "address": "231 Bangabandhu Road, Narayanganj",
-    "phone": "02-7632221"
+    "phone": "02-7632221",
+    "year": "{locale, select, en {2023} other {২০২৩}}"
   },
   "links": {
     "brand": "Sudhijan Pathagar",
