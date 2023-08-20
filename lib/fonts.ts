@@ -12,14 +12,14 @@ export const notoSans = Noto_Sans_Bengali({
 });
 
 export const nikosh = localFont({
-  src: [{ path: "../public/fonts/Nikosh.ttf" }],
+  src: [{ path: "../public/fonts/nikosh.ttf" }],
   variable: "--font-nikosh",
 });
 
 export const sirajee = localFont({
   src: [
-    { path: "../public/fonts/Li Sirajee Misbah.ttf", style: "normal" },
-    { path: "../public/fonts/Li Sirajee Misbah Italic.ttf", style: "italic" },
+    { path: "../public/fonts/sirajee.ttf", style: "normal" },
+    { path: "../public/fonts/sirajee_italic.ttf", style: "italic" },
   ],
   variable: "--font-sirajee",
 });
