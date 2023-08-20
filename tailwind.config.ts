@@ -15,9 +15,10 @@ const config: Config = {
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
-        nikosh: ["var(--font-nikosh)"],
+        kalpurush: ["var(--font-kalpurush)"],
+        noto: ["var(--font-noto-sans)"],
         sirajee: ["var(--font-sirajee)"],
-        bengali: ["var(--font-noto-bengali)"],
+        solaiman: ["var(--font-solaiman-lipi)"],
       },
       colors: {
         primary: {

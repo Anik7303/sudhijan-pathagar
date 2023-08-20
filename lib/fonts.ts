@@ -6,20 +6,25 @@ export const inter = Inter({
   variable: "--font-inter",
 });
 
-export const notoSans = Noto_Sans_Bengali({
-  subsets: ["bengali"],
-  variable: "--font-noto-bengali",
+export const kalpurush = localFont({
+  src: [{ path: "../fonts/kalpurush.ttf" }],
+  variable: "--font-kalpurush",
 });
 
-export const nikosh = localFont({
-  src: [{ path: "../public/fonts/nikosh.ttf" }],
-  variable: "--font-nikosh",
+export const notoSans = Noto_Sans_Bengali({
+  subsets: ["bengali"],
+  variable: "--font-noto-sans",
+});
+
+export const solaimanLipi = localFont({
+  src: [{ path: "../fonts/solaiman_lipi.ttf" }],
+  variable: "--font-solaiman-lipi",
 });
 
 export const sirajee = localFont({
   src: [
-    { path: "../public/fonts/sirajee.ttf", style: "normal" },
-    { path: "../public/fonts/sirajee_italic.ttf", style: "italic" },
+    { path: "../fonts/sirajee.ttf", style: "normal" },
+    { path: "../fonts/sirajee_italic.ttf", style: "italic" },
   ],
   variable: "--font-sirajee",
 });

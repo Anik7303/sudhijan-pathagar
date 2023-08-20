@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import "@/app/globals.css";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
-import { inter, nikosh, notoSans, sirajee } from "@/lib/fonts";
+import { inter, kalpurush, notoSans, sirajee, solaimanLipi } from "@/lib/fonts";
 import { locales } from "@/lib/locales";
 import { getMessages } from "@/lib/messages";
 
@@ -34,13 +34,13 @@ export default async function RootLocaleLayout({
   }
   const classes = clsx(
     inter.variable,
-    nikosh.variable,
+    kalpurush.variable,
     notoSans.variable,
     sirajee.variable,
-    locale === "bn" ? "font-nikosh" : "font-inter",
+    solaimanLipi.variable,
+    locale === "bn" ? "font-solaiman" : "font-inter",
     "flex min-h-[100svh] flex-col"
   );
-
   return (
     <html lang={locale}>
       <body className={classes}>
