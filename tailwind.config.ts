@@ -31,6 +31,7 @@ const config: Config = {
           light: "rgb(217,71,38)",
           dark: "rgb(114,31,13)",
         },
+        facebook: "rgb(24,119,242)",
       },
     },
   },
