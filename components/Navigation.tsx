@@ -1,10 +1,12 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+
 import Brand from "./Brand";
 import DropdownMenu from "./DropdownMenu";
 import DropdownMenuItem from "./DropdownMenuItem";
 import NavLink from "./NavLink";
+import LocaleSwitch from "./LocaleSwitch";
 
 const links = [
   { href: "/", label: "home" },
@@ -61,36 +63,30 @@ const links = [
 export default function Navigation() {
   const t = useTranslations("links");
   return (
-    <header className="sticky top-0 z-10 flex flex-col flex-wrap items-center justify-between bg-white px-2 py-3 backdrop-blur lg:flex-row">
-      <Brand label={t("brand")} size={40} bold />
-      <nav className="hidden flex-col items-center gap-1 lg:flex lg:flex-row">
-        {links.map((link) => {
-          if (link.children) {
-            return (
-              <DropdownMenu
-                key={link.label}
-                // @ts-ignore
-                label={t(link.label)}
-                href={link.href}
-              >
-                {link.children.map((item) => (
-                  <DropdownMenuItem key={item.label}>
-                    <NavLink href={item.href}>
-                      {/* @ts-ignore */}
-                      {t(item.label)}
-                    </NavLink>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenu>
-            );
-          }
-          return (
-            <NavLink key={link.label} href={link.href} variant={link.variant}>
+    <header className="sticky top-0 z-10 flex flex-col gap-2 bg-white p-4">
+      <div className="flex items-center justify-between">
+        <Brand label={t("brand")} size={40} bold />
+        <LocaleSwitch />
+      </div>
+      <nav className="flex justify-end gap-2">
+        {links.map(({ children, href, label, variant }) =>
+          children ? (
+            // @ts-ignore
+            <DropdownMenu key={label} label={t(label)} href={href}>
+              {children.map(({ label, href }) => (
+                <DropdownMenuItem key={label} href={href}>
+                  {/* @ts-ignore */}
+                  {t(label)}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenu>
+          ) : (
+            <NavLink key={label} href={href} variant={variant}>
               {/* @ts-ignore */}
-              {t(link.label)}
+              {t(label)}
             </NavLink>
-          );
-        })}
+          )
+        )}
       </nav>
     </header>
   );
