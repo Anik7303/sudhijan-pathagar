@@ -1,14 +1,15 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Facebook } from "react-feather";
+import { ThemeProvider } from "next-themes";
 
 import Brand from "./Brand";
 import DropdownMenu from "./DropdownMenu";
 import DropdownMenuItem from "./DropdownMenuItem";
+import FacebookLink from "./FacebookLink";
 import LocaleSwitch from "./LocaleSwitch";
 import NavLink from "./NavLink";
-import FacebookLink from "./FacebookLink";
+import ThemeSwitch from "./ThemeSwitch";
 
 const links = [
   { href: "/", label: "home" },
@@ -66,10 +67,13 @@ export default function Navigation() {
   const t = useTranslations("links");
   return (
     <header className="sticky top-0 z-10 flex flex-col gap-2 bg-white p-4">
-      <div className="flex items-center justify-between">
+      <div className="z-10 flex items-center justify-between">
         <Brand label={t("brand")} size={40} bold />
         <div className="flex items-center gap-2">
           <FacebookLink size={16} />
+          <ThemeProvider attribute="class" enableSystem>
+            <ThemeSwitch />
+          </ThemeProvider>
           <LocaleSwitch />
         </div>
       </div>
