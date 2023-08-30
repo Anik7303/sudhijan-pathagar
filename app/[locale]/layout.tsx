@@ -56,7 +56,7 @@ export default async function RootLocaleLayout({
           timeZone="Asia/Dhaka"
         >
           <Navigation />
-          <main className="flex-1">{children}</main>
+          <div className="flex-grow">{children}</div>
           <Footer />
         </NextIntlClientProvider>
       </body>

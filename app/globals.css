@@ -28,3 +28,10 @@
     background: rgb(var(--background-rgb));
   }
 }
+
+@layer components {
+  .slide-show {
+    @apply relative h-full w-full;
+    min-height: calc(100vh - 120px);
+  }
+}
