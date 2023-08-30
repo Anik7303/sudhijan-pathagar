@@ -1,46 +1,9 @@
 import { useState } from "react";
 
+import slides from "@/data/slides";
 import Slide from "./Slide";
 import SlideButton from "./SlideButton";
 import SlideDot from "./SlideDot";
-
-const slides = [
-  {
-    id: "8Qpzjlqr1zlnCzPolKiT",
-    image: "8Qpzjlqr1zlnCzPolKiT.jpg",
-    description: "",
-    width: 1281,
-    height: 1868,
-  },
-  {
-    id: "oclBTgsO1TvihYzBlGCN",
-    image: "oclBTgsO1TvihYzBlGCN.jpeg",
-    description: "",
-    width: 1224,
-    height: 1224,
-  },
-  {
-    id: "ScNuhvucQaNPTt9fC5Js",
-    image: "ScNuhvucQaNPTt9fC5Js.jpg",
-    description: "",
-    width: 642,
-    height: 960,
-  },
-  {
-    id: "Sv1vzEGYJn9yH8tjMX6J",
-    image: "Sv1vzEGYJn9yH8tjMX6J.jpeg",
-    description: "",
-    width: 963,
-    height: 1280,
-  },
-  {
-    id: "z8YRrgwfcVnt5NNHPtfR",
-    image: "z8YRrgwfcVnt5NNHPtfR.jpeg",
-    description: "",
-    width: 963,
-    height: 1280,
-  },
-];
 
 export default function SlideShow() {
   const maxSlideIndex = slides.length - 1;
@@ -70,6 +33,7 @@ export default function SlideShow() {
           alt={item.description}
           width={item.width}
           height={item.height}
+          blurDataUrl={item.blurDataUrl}
         />
       ))}
       <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center justify-center gap-2">

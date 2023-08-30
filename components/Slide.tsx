@@ -7,9 +7,17 @@ interface SlideProps {
   alt: string;
   width: number;
   height: number;
+  blurDataUrl: string;
 }
 
-export default function Slide({ src, alt, active, width, height }: SlideProps) {
+export default function Slide({
+  src,
+  alt,
+  active,
+  width,
+  height,
+  blurDataUrl,
+}: SlideProps) {
   return (
     <div
       className={clsx(
@@ -18,11 +26,13 @@ export default function Slide({ src, alt, active, width, height }: SlideProps) {
       )}
     >
       <Image
+        className="h-full w-full object-cover"
         src={src}
         alt={alt}
-        width={width}
-        height={height}
-        className="h-full w-full object-cover"
+        placeholder="blur"
+        blurDataURL={blurDataUrl}
+        sizes="100vw"
+        fill
       />
     </div>
   );

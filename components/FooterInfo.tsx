@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import { Facebook, Mail, MapPin, Phone } from "react-feather";
 
 const items = [
-  { Icon: Phone, label: "phone", href: "tel+:02763221" },
+  { Icon: Phone, label: "phone", href: "tel:+88027632221" },
   {
     Icon: Facebook,
     label: "name",
