@@ -6,7 +6,13 @@ import { notFound } from "next/navigation";
 import "@/app/globals.css";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
-import { inter, kalpurush, notoSans, sirajee, solaimanLipi } from "@/lib/fonts";
+import {
+  kalpurush,
+  notoSans,
+  openSans,
+  sirajee,
+  solaimanLipi,
+} from "@/lib/fonts";
 import { locales } from "@/lib/locales";
 import { getMessages } from "@/lib/messages";
 
@@ -33,16 +39,16 @@ export default async function RootLocaleLayout({
     notFound();
   }
   const classes = clsx(
-    inter.variable,
     kalpurush.variable,
     notoSans.variable,
+    openSans.variable,
     sirajee.variable,
     solaimanLipi.variable,
-    locale === "bn" ? "font-solaiman" : "font-inter",
+    locale === "bn" ? "font-solaiman" : "font-open-sans",
     "flex min-h-[100svh] flex-col"
   );
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={classes}>
         <NextIntlClientProvider
           locale={locale}

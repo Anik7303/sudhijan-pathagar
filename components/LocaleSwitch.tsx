@@ -18,7 +18,7 @@ export default function LocaleSwitch() {
 
   return (
     <select
-      className="cursor-pointer rounded-md p-2"
+      className="cursor-pointer rounded-md bg-white p-2"
       value={locale}
       onChange={handleLocaleChange}
     >

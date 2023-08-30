@@ -34,7 +34,7 @@ export default function DropdownMenu({
       </Link>
       <ul
         className={clsx(
-          "absolute top-10 hidden flex-col border-2 bg-white p-4 group-hover:flex lg:shadow-lg",
+          "absolute top-10 hidden flex-col bg-white p-4 group-hover:flex lg:shadow-lg",
           align === "center" && "left-1/2 -translate-x-1/2",
           align === "left" && "lg:left-0",
           align === "right" && "lg:right-0"

@@ -18,6 +18,7 @@ const config: Config = {
         inter: ["var(--font-inter)"],
         kalpurush: ["var(--font-kalpurush)"],
         noto: ["var(--font-noto-sans)"],
+        "open-sans": ["var(--font-open-sans)"],
         sirajee: ["var(--font-sirajee)"],
         solaiman: ["var(--font-solaiman-lipi)"],
       },

@@ -1,4 +1,4 @@
-import { Inter, Noto_Sans_Bengali } from "next/font/google";
+import { Inter, Noto_Sans_Bengali, Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
 
 export const inter = Inter({
@@ -14,6 +14,11 @@ export const kalpurush = localFont({
 export const notoSans = Noto_Sans_Bengali({
   subsets: ["bengali"],
   variable: "--font-noto-sans",
+});
+
+export const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
 });
 
 export const solaimanLipi = localFont({
