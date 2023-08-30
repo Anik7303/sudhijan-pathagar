@@ -13,7 +13,6 @@ import ThemeSwitch from "./ThemeSwitch";
 
 const links = [
   { href: "/", label: "home" },
-  { href: "/institute", label: "institute" },
   {
     href: "/founding_period",
     label: "founding_period.index",
